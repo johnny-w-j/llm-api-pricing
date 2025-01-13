@@ -1,0 +1,812 @@
+[
+  {
+    "model": "Llama 3.2 1B (Preview) 8k",
+    "inputCost": 0.04,
+    "outputCost": 0.04,
+    "provider": "Groq"
+  },
+  {
+    "model": "Llama 3.2 3B (Preview) 8k",
+    "inputCost": 0.06,
+    "outputCost": 0.06,
+    "provider": "Groq"
+  },
+  {
+    "model": "Llama 3.3 70B Versatile 128k",
+    "inputCost": 0.59,
+    "outputCost": 0.79,
+    "provider": "Groq"
+  },
+  {
+    "model": "Llama 3.1 8B Instant 128k",
+    "inputCost": 0.05,
+    "outputCost": 0.08,
+    "provider": "Groq"
+  },
+  {
+    "model": "Llama 3 70B 8k",
+    "inputCost": 0.59,
+    "outputCost": 0.79,
+    "provider": "Groq"
+  },
+  {
+    "model": "Llama 3 8B 8k",
+    "inputCost": 0.05,
+    "outputCost": 0.08,
+    "provider": "Groq"
+  },
+  {
+    "model": "Mixtral 8x7B Instruct 32k",
+    "inputCost": 0.24,
+    "outputCost": 0.24,
+    "provider": "Groq"
+  },
+  {
+    "model": "Gemma 7B 8k Instruct",
+    "inputCost": 0.07,
+    "outputCost": 0.07,
+    "provider": "Groq"
+  },
+  {
+    "model": "Gemma 2 9B 8k",
+    "inputCost": 0.2,
+    "outputCost": 0.2,
+    "provider": "Groq"
+  },
+  {
+    "model": "Llama 3 Groq 70B Tool Use Preview 8k",
+    "inputCost": 0.89,
+    "outputCost": 0.89,
+    "provider": "Groq"
+  },
+  {
+    "model": "Llama 3 Groq 8B Tool Use Preview 8k",
+    "inputCost": 0.19,
+    "outputCost": 0.19,
+    "provider": "Groq"
+  },
+  {
+    "model": "Llama Guard 3 8B 8k",
+    "inputCost": 0.2,
+    "outputCost": 0.2,
+    "provider": "Groq"
+  },
+  {
+    "model": "Llama 3.3 70B SpecDec 8k",
+    "inputCost": 0.59,
+    "outputCost": 0.99,
+    "provider": "Groq"
+  },
+  {
+    "model": "gpt-4o",
+    "inputCost": 2.5,
+    "outputCost": 10,
+    "provider": "OpenAI_4o"
+  },
+  {
+    "model": "gpt-4o-2024-11-20",
+    "inputCost": 2.5,
+    "outputCost": 10,
+    "provider": "OpenAI_4o"
+  },
+  {
+    "model": "gpt-4o-2024-08-06",
+    "inputCost": 2.5,
+    "outputCost": 10,
+    "provider": "OpenAI_4o"
+  },
+  {
+    "model": "gpt-4o-2024-05-13",
+    "inputCost": 5,
+    "outputCost": 15,
+    "provider": "OpenAI_4o"
+  },
+  {
+    "model": "gpt-4o-mini",
+    "inputCost": 0.15,
+    "outputCost": 0.6,
+    "provider": "OpenAI_4omini"
+  },
+  {
+    "model": "gpt-4o-mini-2024-07-18",
+    "inputCost": 0.15,
+    "outputCost": 0.6,
+    "provider": "OpenAI_4omini"
+  },
+  {
+    "model": "o1",
+    "inputCost": 15,
+    "outputCost": 60,
+    "provider": "OpenAI_o1"
+  },
+  {
+    "model": "o1-2024-12-17",
+    "inputCost": 15,
+    "outputCost": 60,
+    "provider": "OpenAI_o1"
+  },
+  {
+    "model": "o1-preview",
+    "inputCost": 15,
+    "outputCost": 60,
+    "provider": "OpenAI_o1"
+  },
+  {
+    "model": "o1-preview-2024-09-12",
+    "inputCost": 15,
+    "outputCost": 60,
+    "provider": "OpenAI_o1"
+  },
+  {
+    "model": "o1-mini",
+    "inputCost": 3,
+    "outputCost": 12,
+    "provider": "OpenAI_o1mini"
+  },
+  {
+    "model": "o1-mini-2024-09-12",
+    "inputCost": 3,
+    "outputCost": 12,
+    "provider": "OpenAI_o1mini"
+  },
+  {
+    "model": "chatgpt-4o-latest",
+    "inputCost": 5,
+    "outputCost": 15,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-4-turbo",
+    "inputCost": 10,
+    "outputCost": 30,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-4-turbo-2024-04-09",
+    "inputCost": 10,
+    "outputCost": 30,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-4",
+    "inputCost": 30,
+    "outputCost": 60,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-4-32k",
+    "inputCost": 60,
+    "outputCost": 120,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-4-0125-preview",
+    "inputCost": 10,
+    "outputCost": 30,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-4-1106-preview",
+    "inputCost": 10,
+    "outputCost": 30,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-3.5-turbo-0125",
+    "inputCost": 0.5,
+    "outputCost": 1.5,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-3.5-turbo-instruct",
+    "inputCost": 1.5,
+    "outputCost": 2,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-3.5-turbo-1106",
+    "inputCost": 1,
+    "outputCost": 2,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-3.5-turbo-0613",
+    "inputCost": 1.5,
+    "outputCost": 2,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-3.5-turbo-16k-0613",
+    "inputCost": 3,
+    "outputCost": 4,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "gpt-3.5-turbo-0301",
+    "inputCost": 1.5,
+    "outputCost": 2,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "davinci-002",
+    "inputCost": 2,
+    "outputCost": 2,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "babbage-002",
+    "inputCost": 0.4,
+    "outputCost": 0.4,
+    "provider": "OpenAI_other"
+  },
+  {
+    "model": "Claude 3.5 Sonnet",
+    "inputCost": 3,
+    "outputCost": 15,
+    "provider": "Anthropic"
+  },
+  {
+    "model": "Claude 3.5 Haiku",
+    "inputCost": 0.8,
+    "outputCost": 4,
+    "provider": "Anthropic"
+  },
+  {
+    "model": "Claude 3 Opus",
+    "inputCost": 15,
+    "outputCost": 75,
+    "provider": "Anthropic"
+  },
+  {
+    "model": "Claude 3 Haiku",
+    "inputCost": 0.25,
+    "outputCost": 1.25,
+    "provider": "Anthropic"
+  },
+  {
+    "model": "Claude 3 Sonnet",
+    "inputCost": 3,
+    "outputCost": 15,
+    "provider": "Anthropic"
+  },
+  {
+    "model": "Jamba 1.5 Mini",
+    "inputCost": 0.2,
+    "outputCost": 0.4,
+    "provider": "AI21Labs"
+  },
+  {
+    "model": "Jamba 1.5 Large",
+    "inputCost": 2,
+    "outputCost": 8,
+    "provider": "AI21Labs"
+  },
+  {
+    "model": "Jamba-Instruct DEPRECATED",
+    "inputCost": 0.5,
+    "outputCost": 0.7,
+    "provider": "AI21Labs"
+  },
+  {
+    "model": "Mistral Large 24.11",
+    "inputCost": 2,
+    "outputCost": 6,
+    "provider": "Mistral"
+  },
+  {
+    "model": "Mistral Small 24.09",
+    "inputCost": 0.2,
+    "outputCost": 0.6,
+    "provider": "Mistral"
+  },
+  {
+    "model": "Codestral",
+    "inputCost": 0.2,
+    "outputCost": 0.6,
+    "provider": "Mistral"
+  },
+  {
+    "model": "Ministral 8B 24.10",
+    "inputCost": 0.1,
+    "outputCost": 0.1,
+    "provider": "Mistral"
+  },
+  {
+    "model": "Ministral 3B 24.10",
+    "inputCost": 0.04,
+    "outputCost": 0.04,
+    "provider": "Mistral"
+  },
+  {
+    "model": "Mistral 7B",
+    "inputCost": 0.25,
+    "outputCost": 0.25,
+    "provider": "Mistral"
+  },
+  {
+    "model": "Mixtral 8x7B",
+    "inputCost": 0.7,
+    "outputCost": 0.7,
+    "provider": "Mistral"
+  },
+  {
+    "model": "Mixtral 8x22B",
+    "inputCost": 2,
+    "outputCost": 6,
+    "provider": "Mistral"
+  },
+  {
+    "model": "Command R+",
+    "inputCost": 2.5,
+    "outputCost": 10,
+    "provider": "Cohere"
+  },
+  {
+    "model": "Command R",
+    "inputCost": 0.15,
+    "outputCost": 0.6,
+    "provider": "Cohere"
+  },
+  {
+    "model": "Command R Fine-tuned Model",
+    "inputCost": 0.3,
+    "outputCost": 1.2,
+    "provider": "Cohere"
+  },
+  {
+    "model": "Command R7B",
+    "inputCost": 0.0375,
+    "outputCost": 0.15,
+    "provider": "Cohere"
+  },
+  {
+    "model": "o1 1217 Global",
+    "inputCost": 15,
+    "outputCost": 60,
+    "provider": "Azure"
+  },
+  {
+    "model": "o1 1217 US/EU – Data Zones",
+    "inputCost": 16.5,
+    "outputCost": 66,
+    "provider": "Azure"
+  },
+  {
+    "model": "o1 1217 Regional",
+    "inputCost": 16.5,
+    "outputCost": 66,
+    "provider": "Azure"
+  },
+  {
+    "model": "o1 preview US/EU – Data Zones",
+    "inputCost": 16.5,
+    "outputCost": 66,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-1120 Global",
+    "inputCost": 2.5,
+    "outputCost": 10,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-1120 US/EU – Data Zones",
+    "inputCost": 2.75,
+    "outputCost": 11,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-1120 Regional",
+    "inputCost": 2.75,
+    "outputCost": 11,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-08-06 Global",
+    "inputCost": 2.5,
+    "outputCost": 10,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-08-06 US/EU – Data Zones",
+    "inputCost": 2.75,
+    "outputCost": 11,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-08-06 Regional",
+    "inputCost": 2.75,
+    "outputCost": 11,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-0513 Global",
+    "inputCost": 5,
+    "outputCost": 15,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-0513 US/EU – Data Zones",
+    "inputCost": 5,
+    "outputCost": 15,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-0513 Regional",
+    "inputCost": 5,
+    "outputCost": 15,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o mini Global",
+    "inputCost": 0.15,
+    "outputCost": 0.6,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o mini US/EU – Data Zones",
+    "inputCost": 0.165,
+    "outputCost": 0.66,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o mini Regional",
+    "inputCost": 0.165,
+    "outputCost": 0.66,
+    "provider": "Azure"
+  },
+  {
+    "model": "o1-mini US/EU – Data Zones",
+    "inputCost": 3.3,
+    "outputCost": 13.2,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-Realtime-Preview-Global",
+    "inputCost": 5,
+    "outputCost": 20,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-Realtime-Preview-US/EU – Data Zones",
+    "inputCost": 5.5,
+    "outputCost": 22,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-Realtime-Preview-Regional",
+    "inputCost": 5.5,
+    "outputCost": 22,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-3.5-Turbo-0301",
+    "inputCost": 1.5,
+    "outputCost": 2,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-3.5-Turbo-0613",
+    "inputCost": 1.5,
+    "outputCost": 2,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-3.5-Turbo-0613",
+    "inputCost": 3,
+    "outputCost": 4,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-3.5-Turbo-1106",
+    "inputCost": 1,
+    "outputCost": 2,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-3.5-Turbo-0125",
+    "inputCost": 0.5,
+    "outputCost": 1.5,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-3.5-Turbo-Instruct",
+    "inputCost": 1.5,
+    "outputCost": 2,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4-Turbo",
+    "inputCost": 10,
+    "outputCost": 30,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4-Turbo-Vision",
+    "inputCost": 10,
+    "outputCost": 30,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4",
+    "inputCost": 30,
+    "outputCost": 60,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4",
+    "inputCost": 60,
+    "outputCost": 120,
+    "provider": "Azure"
+  },
+  {
+    "model": "Babbage-002",
+    "inputCost": 0.4,
+    "outputCost": 0.4,
+    "provider": "Azure"
+  },
+  {
+    "model": "Davinci-002",
+    "inputCost": 2,
+    "outputCost": 2,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-1120 Global (Batch API)",
+    "inputCost": 1.25,
+    "outputCost": 5,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-1120 US/EU – Data Zones (Batch API)",
+    "inputCost": 1.375,
+    "outputCost": 5.5,
+    "provider": "Azure"
+  },
+  {
+    "model": "GPT-4o-2024-0513 Global (Batch API)",
+    "inputCost": 2.5,
+    "outputCost": 7.5,
+    "provider": "Azure"
+  },
+  {
+    "model": "Gemini 1.5 Pro",
+    "inputCost": 2.5,
+    "outputCost": 10,
+    "provider": "GoogleCloud_Gemini"
+  },
+  {
+    "model": "Gemini 1.5 Flash 8B",
+    "inputCost": 0.15,
+    "outputCost": 0.6,
+    "provider": "GoogleCloud_Gemini"
+  },
+  {
+    "model": "Gemini 1.5 Flash",
+    "inputCost": 0.075,
+    "outputCost": 0.3,
+    "provider": "GoogleCloud_Gemini"
+  },
+  {
+    "model": "Gemini Pro",
+    "inputCost": 0.5,
+    "outputCost": 1.5,
+    "provider": "GoogleCloud_Gemini"
+  },
+  {
+    "model": "Llama3.1 405B",
+    "inputCost": 5,
+    "outputCost": 16,
+    "provider": "GoogleCloud_Llama"
+  },
+  {
+    "model": "Llama3.1 70B",
+    "inputCost": 2.65,
+    "outputCost": 3.5,
+    "provider": "GoogleCloud_Llama"
+  },
+  {
+    "model": "Jamba 1.5 Large",
+    "inputCost": 2,
+    "outputCost": 8,
+    "provider": "AWS_AI21"
+  },
+  {
+    "model": "Jamba 1.5 Mini",
+    "inputCost": 0.2,
+    "outputCost": 0.4,
+    "provider": "AWS_AI21"
+  },
+  {
+    "model": "Jurassic-2 Mid",
+    "inputCost": 12.5,
+    "outputCost": 12.5,
+    "provider": "AWS_AI21"
+  },
+  {
+    "model": "Jurassic-2 Ultra",
+    "inputCost": 18.8,
+    "outputCost": 18.8,
+    "provider": "AWS_AI21"
+  },
+  {
+    "model": "Jamba-Instruct",
+    "inputCost": 0.5,
+    "outputCost": 0.7,
+    "provider": "AWS_AI21"
+  },
+  {
+    "model": "Amazon Nova Micro",
+    "inputCost": 0.035,
+    "outputCost": 0.14,
+    "provider": "AWS_Nova"
+  },
+  {
+    "model": "Amazon Nova Lite",
+    "inputCost": 0.06,
+    "outputCost": 0.24,
+    "provider": "AWS_Nova"
+  },
+  {
+    "model": "Amazon Nova Pro",
+    "inputCost": 0.8,
+    "outputCost": 3.2,
+    "provider": "AWS_Nova"
+  },
+  {
+    "model": "Claude 3.5 Sonnet",
+    "inputCost": 3,
+    "outputCost": 15,
+    "provider": "AWS_Anthropic"
+  },
+  {
+    "model": "Claude 3.5 Haiku",
+    "inputCost": 0.8,
+    "outputCost": 4,
+    "provider": "AWS_Anthropic"
+  },
+  {
+    "model": "Claude 3 Opus",
+    "inputCost": 15,
+    "outputCost": 75,
+    "provider": "AWS_Anthropic"
+  },
+  {
+    "model": "Claude 3 Haiku",
+    "inputCost": 0.25,
+    "outputCost": 1.25,
+    "provider": "AWS_Anthropic"
+  },
+  {
+    "model": "Claude 3 Sonnet",
+    "inputCost": 3,
+    "outputCost": 15,
+    "provider": "AWS_Anthropic"
+  },
+  {
+    "model": "Claude 2.1",
+    "inputCost": 8,
+    "outputCost": 24,
+    "provider": "AWS_Anthropic"
+  },
+  {
+    "model": "Claude 2.0",
+    "inputCost": 8,
+    "outputCost": 24,
+    "provider": "AWS_Anthropic"
+  },
+  {
+    "model": "Claude Instant",
+    "inputCost": 0.8,
+    "outputCost": 2.4,
+    "provider": "AWS_Anthropic"
+  },
+  {
+    "model": "Command",
+    "inputCost": 1.5,
+    "outputCost": 2,
+    "provider": "AWS_Cohere"
+  },
+  {
+    "model": "Command-Light",
+    "inputCost": 0.3,
+    "outputCost": 0.6,
+    "provider": "AWS_Cohere"
+  },
+  {
+    "model": "Command R+",
+    "inputCost": 3,
+    "outputCost": 15,
+    "provider": "AWS_Cohere"
+  },
+  {
+    "model": "Command R",
+    "inputCost": 0.5,
+    "outputCost": 1.5,
+    "provider": "AWS_Cohere"
+  },
+  {
+    "model": "Mistral 7B",
+    "inputCost": 0.15,
+    "outputCost": 0.2,
+    "provider": "AWS_Mistral"
+  },
+  {
+    "model": "Mixtral 8*7B",
+    "inputCost": 0.45,
+    "outputCost": 0.7,
+    "provider": "AWS_Mistral"
+  },
+  {
+    "model": "Mistral Small (24.02)",
+    "inputCost": 1,
+    "outputCost": 3,
+    "provider": "AWS_Mistral"
+  },
+  {
+    "model": "Mistral Large (24.02)",
+    "inputCost": 4,
+    "outputCost": 12,
+    "provider": "AWS_Mistral"
+  },
+  {
+    "model": "Llama 3.1 Instruct (8B)",
+    "inputCost": 0.22,
+    "outputCost": 0.22,
+    "provider": "AWS_Llama31"
+  },
+  {
+    "model": "Llama 3.1 Instruct (70B)",
+    "inputCost": 0.72,
+    "outputCost": 0.72,
+    "provider": "AWS_Llama31"
+  },
+  {
+    "model": "Llama 3.1 Instruct (405B)",
+    "inputCost": 2.4,
+    "outputCost": 2.4,
+    "provider": "AWS_Llama31"
+  },
+  {
+    "model": "Llama 3.1 Instruct (70B) (w/ latency optimized inference)",
+    "inputCost": 0.9,
+    "outputCost": 0.9,
+    "provider": "AWS_Llama31"
+  },
+  {
+    "model": "Llama 3.1 Instruct (405B) (w/ latency optimized inference)",
+    "inputCost": 3,
+    "outputCost": 3,
+    "provider": "AWS_Llama31"
+  },
+  {
+    "model": "Llama 3.2 Instruct (1B)",
+    "inputCost": 0.1,
+    "outputCost": 0.1,
+    "provider": "AWS_Llama32"
+  },
+  {
+    "model": "Llama 3.2 Instruct (3B)",
+    "inputCost": 0.15,
+    "outputCost": 0.15,
+    "provider": "AWS_Llama32"
+  },
+  {
+    "model": "Llama 3.2 Instruct (11B)",
+    "inputCost": 0.16,
+    "outputCost": 0.16,
+    "provider": "AWS_Llama32"
+  },
+  {
+    "model": "Llama 3.2 Instruct (90B)",
+    "inputCost": 0.72,
+    "outputCost": 0.72,
+    "provider": "AWS_Llama32"
+  },
+  {
+    "model": "Llama 3.3 Instruct (70B)",
+    "inputCost": 0.72,
+    "outputCost": 0.72,
+    "provider": "AWS_Llama33"
+  }
+]

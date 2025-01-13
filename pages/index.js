@@ -1,114 +1,231 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [filter, setFilter] = useState("");
+  const [sortedData, setSortedData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [sortConfig, setSortConfig] = useState({ key: null, direction: null });
+
+  // Load pricing data from JSON file
+  useEffect(() => {
+    const fetchPricingData = async () => {
+      try {
+        const response = await import("../data/pricingData.json"); // Dynamic import
+        setSortedData(response.default);
+        setFilteredData(response.default); // Initialize with full data
+      } catch (error) {
+        console.error("Error loading pricing data:", error);
+      }
+    };
+    fetchPricingData();
+  }, []);
+
+  // Handle sorting by column
+  const handleSort = (key) => {
+    let direction = "asc";
+
+    if (sortConfig.key === key && sortConfig.direction === "asc") {
+      direction = "desc";
+    }
+
+    const sorted = [...sortedData].sort((a, b) => {
+      if (typeof a[key] === "number") {
+        return direction === "asc" ? a[key] - b[key] : b[key] - a[key];
+      }
+      return direction === "asc"
+        ? a[key].localeCompare(b[key])
+        : b[key].localeCompare(a[key]);
+    });
+
+    setSortConfig({ key, direction });
+    setSortedData(sorted);
+    setFilteredData(
+      sorted.filter((item) =>
+        item.model.toLowerCase().includes(filter.toLowerCase())
+      )
+    );
+  };
+
+  // Handle filtering by search input
+  const handleFilter = (e) => {
+    const value = e.target.value;
+    setFilter(value);
+    setFilteredData(
+      sortedData.filter((item) =>
+        item.model.toLowerCase().includes(value.toLowerCase())
+      )
+    );
+  };
+
+  // Get the sort icon for a column
+  const getSortIcon = (key) => {
+    if (sortConfig.key === key) {
+      return sortConfig.direction === "asc" ? "↑" : "↓";
+    }
+    return "⇅";
+  };
+
+  // Extract the prefix of the provider before "_"
+  const getProviderDisplay = (provider) => {
+    return provider.includes("_") ? provider.split("_")[0] : provider;
+  };
+
+  // Map provider names to their corresponding image paths
+  const getProviderIcon = (provider) => {
+    const providerName = getProviderDisplay(provider);
+    const iconPath = `/images/${providerName}.svg`;
+    return iconPath;
+  };
+
   return (
     <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+        backgroundColor: "#1e1e1e",
+        color: "#d4d4d4",
+        padding: "20px",
+      }}
     >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+      <div style={{ width: "100%", maxWidth: "1200px" }}>
+        <h1 style={{ textAlign: "center", marginBottom: "5px" }}>
+          LLM Pricing Table
+        </h1>
+        <p
+          style={{
+            textAlign: "center",
+            fontStyle: "italic",
+            fontSize: "14px",
+            marginBottom: "20px",
+            color: "#d4d4d4",
+          }}
+        >
+          Last Scraped Jan. 12th 2025; For US-East unless otherwise stated
+        </p>
+        <input
+          type="text"
+          placeholder="Search by model name"
+          value={filter}
+          onChange={handleFilter}
+          style={{
+            display: "block",
+            margin: "0 auto 20px auto",
+            padding: "10px",
+            borderRadius: "5px",
+            border: "1px solid #3c3c3c",
+            backgroundColor: "#252526",
+            color: "#d4d4d4",
+            width: "90%",
+            maxWidth: "400px",
+          }}
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <table
+          style={{
+            width: "100%",
+            borderCollapse: "collapse",
+            backgroundColor: "#252526",
+            border: "1px solid #3c3c3c",
+          }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <thead>
+            <tr>
+              <th
+                style={{
+                  padding: "10px",
+                  textAlign: "center",
+                  cursor: "pointer",
+                  backgroundColor: "#2d2d2d",
+                  borderBottom: "1px solid #3c3c3c",
+                }}
+                onClick={() => handleSort("model")}
+              >
+                Model Name {getSortIcon("model")}
+              </th>
+              <th
+                style={{
+                  padding: "10px",
+                  textAlign: "center",
+                  cursor: "pointer",
+                  backgroundColor: "#2d2d2d",
+                  borderBottom: "1px solid #3c3c3c",
+                }}
+                onClick={() => handleSort("inputCost")}
+              >
+                Input Cost ($ USD / M tokens) {getSortIcon("inputCost")}
+              </th>
+              <th
+                style={{
+                  padding: "10px",
+                  textAlign: "center",
+                  cursor: "pointer",
+                  backgroundColor: "#2d2d2d",
+                  borderBottom: "1px solid #3c3c3c",
+                }}
+                onClick={() => handleSort("outputCost")}
+              >
+                Output Cost ($ USD / M tokens) {getSortIcon("outputCost")}
+              </th>
+              <th
+                style={{
+                  padding: "10px",
+                  textAlign: "center",
+                  cursor: "pointer",
+                  backgroundColor: "#2d2d2d",
+                  borderBottom: "1px solid #3c3c3c",
+                }}
+                onClick={() => handleSort("provider")}
+              >
+                Provider {getSortIcon("provider")}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredData.map((item, index) => (
+              <tr
+                key={index}
+                style={{
+                  textAlign: "center",
+                  backgroundColor: index % 2 === 0 ? "#2d2d2d" : "#1e1e1e",
+                }}
+              >
+                <td style={{ padding: "10px", border: "1px solid #3c3c3c" }}>
+                  {item.model}
+                </td>
+                <td style={{ padding: "10px", border: "1px solid #3c3c3c" }}>
+                  {item.inputCost.toFixed(2)}
+                </td>
+                <td style={{ padding: "10px", border: "1px solid #3c3c3c" }}>
+                  {item.outputCost.toFixed(2)}
+                </td>
+                <td
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "10px",
+                    border: "1px solid #3c3c3c",
+                  }}
+                >
+                  <img
+                    src={getProviderIcon(item.provider)}
+                    alt={getProviderDisplay(item.provider)}
+                    style={{
+                      width: "24px",
+                      height: "24px",
+                      marginRight: "8px",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                    }}
+                  />
+                  {getProviderDisplay(item.provider)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
