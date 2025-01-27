@@ -808,5 +808,17 @@
     "inputCost": 0.72,
     "outputCost": 0.72,
     "provider": "AWS_Llama33"
+  },
+  {
+    "model": "deepseek-chat(DeepSeek-V3)",
+    "inputCost": 0.27,
+    "outputCost": 1.1,
+    "provider": "DeepSeek"
+  },
+  {
+    "model": "deepseek-reasoner(DeepSeek-R1)",
+    "inputCost": 0.55,
+    "outputCost": 2.19,
+    "provider": "DeepSeek"
   }
 ]
